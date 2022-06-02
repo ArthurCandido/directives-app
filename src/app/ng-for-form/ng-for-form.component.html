@@ -1,0 +1,76 @@
+<mat-card class="card">
+    <mat-card-content>
+        <section>
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Primeiro nome" name="name"  [(ngModel)]="nome">
+                <mat-icon matSuffix>person</mat-icon>
+
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Endereço" name="address"  [(ngModel)]="endereco">
+                <mat-icon matSuffix>home</mat-icon>
+
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Telefone" name="phone"  [(ngModel)]="telefone">
+                <mat-icon matSuffix>phone</mat-icon>
+
+            </mat-form-field>
+
+            <mat-form-field class="form-field" >
+                <mat-select placeholder="Cidade" [(ngModel)]="cidade" >
+                <mat-option *ngFor="let city of cidades" [value]="city.name">
+                    {{city.name}} / {{city.estado}}
+                </mat-option>      
+            </mat-select> 
+
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Idade" name="age"  [(ngModel)]="idade">
+
+            </mat-form-field>
+        </section>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="save()">Salvar Informações</button>
+        <button mat-raised-button color="warn" (click)="cancel()">Cancelar</button>
+
+
+    </mat-card-actions>
+</mat-card>
+
+<mat-card class="card" *ngIf="clients.length > 0">
+    <mat-card-content>
+        <section>
+            <mat-list>
+                <h3 matHeader>Clientes</h3>
+            <mat-divider></mat-divider>
+            <mat-list-item *ngFor="let c of clients; let i=index">
+                <mat-icon matListIcon>person</mat-icon>
+                <h2 matLine>Nome: {{c.nome}}</h2>
+                <h2 matLine>Endereço: {{c.endereco}}</h2>
+                <h2 matLine>Telefone: {{c.telefone}}</h2>
+                <h2 matLine>Idade: {{c.idade}}</h2>
+                <h2 matLine>Cidade: {{c.cidade}}</h2>
+                <button mat-icon-button color="accent" (click)="delete(i)">
+                    <mat-icon>delete</mat-icon>
+
+                </button>
+
+
+
+            </mat-list-item>
+
+            </mat-list>
+
+
+
+        </section>
+        <mat-card-actions>   
+    
+        </mat-card-actions>
+    

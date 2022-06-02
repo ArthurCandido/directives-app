@@ -1,0 +1,39 @@
+mat-card{
+
+    margin: 300px;
+    
+    
+    }
+
+    p{ 
+        padding-left: 40px;
+        padding-bottom: 20px;
+    }
+
+    .classe0{
+        font-size: 15px;
+        color: greenyellow;
+        background-color: grey;
+        padding: 10px;
+    }
+
+    .classe1{
+        font-size: 25px;
+        color: rebeccapurple;
+        background-color: orangered;
+        padding: 20px;
+    }
+
+    .classe2{
+        font-size: 30px;
+        color: pink;
+        background-color: blueviolet;
+        padding: 25px;
+    }
+
+    .classe3{
+        font-size: 40px;
+        color: burlywood;
+        background-color: black;
+        padding: 40px;
+    }
